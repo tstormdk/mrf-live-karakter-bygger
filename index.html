@@ -55,7 +55,7 @@
   const res = await fetch(`${apiRoot}/race/read.php`);
   const data = await res.json();
   console.log("Race API data:", data);
-  return data.Racer || [];
+  return data.Racer.Racer || [];
   }
 
  /*   async function fetchClasses() {
@@ -67,7 +67,7 @@
   const res = await fetch(`${apiRoot}/klasser/read.php`);
   const data = await res.json();
   console.log("Classes API data:", data);
-  return data.records || [];
+  return data.Klasser || [];
 }
 
     async function fetchRaceById(id) {

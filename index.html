@@ -67,7 +67,7 @@
   const res = await fetch(`${apiRoot}/klasser/read.php`);
   const data = await res.json();
   console.log("Classes API data:", data);
-  return data.Klasse.Klasse || [];
+  return data.Klasser || [];
 }
 
     async function fetchRaceById(id) {

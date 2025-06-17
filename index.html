@@ -55,7 +55,7 @@
   const res = await fetch(`${apiRoot}/race/read.php`);
   const data = await res.json();
   console.log("Race API data:", data);
-  return data.records || [];
+  return data.Racer || [];
   }
 
  /*   async function fetchClasses() {

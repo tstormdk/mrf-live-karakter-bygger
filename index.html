@@ -45,17 +45,30 @@
     const resultTable = document.getElementById('resultTable');
     const tableBody = resultTable.querySelector('tbody');
 
-    async function fetchRaces() {
+ /*   async function fetchRaces() {
       const res = await fetch(`${apiRoot}/race/read.php`);
       const data = await res.json();
       return data;
     }
+*/
+    async function fetchRaces() {
+  const res = await fetch(`${apiRoot}/race/read.php`);
+  const data = await res.json();
+  console.log("Race API data:", data);
+  return data.records || [];
+  }
 
-    async function fetchClasses() {
+ /*   async function fetchClasses() {
       const res = await fetch(`${apiRoot}/klasser/read.php`);
       const data = await res.json();
       return data;
-    }
+    }*/
+    async function fetchClasses() {
+  const res = await fetch(`${apiRoot}/klasser/read.php`);
+  const data = await res.json();
+  console.log("Classes API data:", data);
+  return data.records || [];
+}
 
     async function fetchRaceById(id) {
       const res = await fetch(`${apiRoot}/race/singleread.php?ID=${id}`);

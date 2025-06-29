@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="da">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Vælg Klasse</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <div id="app">
+    <h1>Vælg din klasse</h1>
+    <div id="class-list" class="card-container"></div>
+  </div>
+
+ <div id="modal" class="modal" style="display:none;"></div>
+   <div id="character-sheet" class="character-sheet">
+    <section class="char">  
+      <h3>Din Karakter</h3>
+      <div id="character-summary"></div>
+      <p><strong>Point tilbage:</strong> <span id="points-left">24</span></p>
+    </section>¨
+
+    <section class="func">
+      <button onclick="window.location.href='magi.html'">Vælg Magi</button>
+      <button onclick="window.location.href='evner.html'">Vælg Evner</button>
+      <hr>
+      <button onclick="window.location.href='index.html'" style="background-color: rgb(14, 47, 34);">Ændre Race</button>
+      <button onclick="window.location.href='klasser.html'" style="background-color: rgb(14, 47, 34);">Ændre Klasse</button>
+      <hr>
+      <button onclick="deleteItems()" style="background-color: darkred;" id="resetAll">Nulstil alt</button>
+    </section>
+
+  </div>
+  <script>
+    function deleteItems() {
+  localStorage.clear();
+  window.location.href='index.html';
+  console.log(localStorage);
+  
+}
+  </script>
+
+  <script src="klasser.js"></script>
+
+
+</body>
+</html>
